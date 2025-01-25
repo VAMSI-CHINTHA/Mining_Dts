@@ -1,0 +1,29 @@
+<mvc:View controllerName="miningjson0956.vam0956miningjson.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page1" title="{i18n>title}">
+    <content>
+          <HBox id="_IDGenHBox1">
+                    <SearchField
+                        id="searchField"
+                        placeholder="Search by Location"
+                        liveChange="onFilterSearch"
+                    />
+                </HBox>
+            <!-- <Button text="{locationsModel>/locations/0/id}" press="onPress"></Button> -->
+            <List
+                items="{locationsModel>/locations}"
+                id="idList"
+                mode="SingleSelectMaster"
+                selectionChange="onRowSelect">
+                <items>
+                    <ObjectListItem id="_IDGenObjectListItem" title="{locationsModel>id}" number="{locationsModel>country}" type="Navigation">
+                        	<attributes>
+								<ObjectAttribute id="_IDGenObjectAttribute" text="{locationsModel>name}" title="Location"></ObjectAttribute>
+							</attributes>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,55 @@
+<mvc:View
+    controllerName="miningjson0956.vam0956miningjson.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m"
+>
+    <Page
+        id="page2"
+        title="{i18n>eTitle}"
+    >
+        <content>
+            <f:SimpleForm id="_IDGenSimpleForm1" title="Location details">
+                <Label id="_IDGenLabel" text="Location Id" />
+                <Text id="_IDGenText" text="{detailModel>/id}" />
+
+                <Label id="_IDGenLabel1" text="Location Description" />
+                <Text id="_IDGenText1" text="{detailModel>/name}" />
+
+                <Label id="_IDGenLabel2" text="Country" />
+                <Text id="_IDGenText2" text="{detailModel>/country}" />
+            </f:SimpleForm>
+             <f:SimpleForm id="_IDGenSimpleForm2" title="Resources Available">
+                <Table id="_IDGenTable" items="{detailModel>/miningOperations/resources}">
+                    <columns>
+                        <Column id="_IDGenColumn" >
+                            <Text id="_IDGenText3" text="Resource Name"></Text>
+                        </Column>
+                        <Column id="_IDGenColumn1" >
+                            <Text id="_IDGenText4" text="Cost"></Text>
+                        </Column>
+                        <Column id="_IDGenColumn2" >
+                            <Text id="_IDGenText5" text="Man Days"></Text>
+                        </Column>
+                         <Column id="_IDGenColumn3" >
+                            <Text id="_IDGenText6" text="PositiveOutcome(Probability)"></Text>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem id="_IDGenColumnListItem" >
+                          <cells>
+                            <Text id="_IDGenText7" text="{detailModel>name}"></Text>
+                            <Text id="_IDGenText8" text="{detailModel>cost}"></Text>
+                            <Text id="_IDGenText9" text="{detailModel>manDays}"></Text>
+                            <Text id="_IDGenText10" text="{detailModel>probabilityOfPositiveOutcome}"></Text>
+                        </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </f:SimpleForm>
+
+
+           
+        </content>
+    </Page>
+</mvc:View>
